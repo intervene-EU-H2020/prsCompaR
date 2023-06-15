@@ -18,15 +18,11 @@ jobs:
         with:
           r-version: 4.x  # Use the desired R version
 
-      - name: Install package dependencies
-        run: Rscript -e 'install.packages(c("devtools"))'
-
-      - name: Check R package
-        run: Rscript -e 'devtools::check()'
-
-      - name: Build R package
-        run: Rscript -e 'devtools::build()'
-        
-      - uses: actions/upload-artifact@v3
+      - uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          path: "*.tar.gz"
+          extra-packages: any::rcmdcheck
+          needs: check
+
+      - uses: r-lib/actions/check-r-package@v2
+        with:
+          upload-snapshots: true          
