@@ -24,18 +24,18 @@ load_results_metadata <- function(basepath, biobanks=c('ukbb','ebb','finngen','G
 
         # original workflow GenoPred metrics
         assoc_filepath <- paste0(basepath, 'results/',b,'/PRS_evaluation/',study_ids[i],'/',s,'/',study_ids[i],'.',phenos[i],'.',s,'.AllMethodComp.assoc.txt')
-        bm_filepath <- paste0(basepath, 'results/',b,'/PRS_evaluation/',study_ids[i],'/',s,'/',study_ids[i],'.',phenos[i],'.',s,'.AllMethodComp.best_models.tsv.gz')
+        bm_filepath <- paste0(basepath, 'results/',b,'/PRS_evaluation/',study_ids[i],'/',s,'/',study_ids[i],'.',phenos[i],'.',s,'.AllMethodComp.best_models.tsv')
         pe_filepath <- paste0(basepath, 'results/',b,'/PRS_evaluation/',study_ids[i],'/',s,'/',study_ids[i],'.',phenos[i],'.',s,'.AllMethodComp.pred_eval.txt')
 
         b_lower <- tolower(b)
 
         # dowstream workflow
         # re-calculated metrics
-        mean_sd_full_filepath <- paste0(basepath,'01_prspipe_followup_results/',b_lower,'/downstream_workflows/results/metrics_and_scor_full/',study_ids[i],'/',study_ids[i],'.',phenos[i],'.',s,'.mean_sd.tsv.gz')
-        metrics_full_filepath <- paste0(basepath,'01_prspipe_followup_results/',b_lower,'/downstream_workflows/results/metrics_and_scor_full/',study_ids[i],'/',study_ids[i],'.',phenos[i],'.',s,'.metrics.tsv.gz')
-        mean_sd_traintest_filepath <- paste0(basepath,'01_prspipe_followup_results/',b_lower,'/downstream_workflows/results/metrics_and_scor_train_test/',study_ids[i],'/',study_ids[i],'.',phenos[i],'.',s,'.mean_sd.tsv.gz')
-        metrics_traintest_filepath <- paste0(basepath,'01_prspipe_followup_results/',b_lower,'/downstream_workflows/results/metrics_and_scor_train_test/',study_ids[i],'/',study_ids[i],'.',phenos[i],'.',s,'.metrics.tsv.gz')
-        score_score_correl_filepath <- paste0(basepath,'01_prspipe_followup_results/',b_lower,'/downstream_workflows/results/metrics_and_scor_train_test/',study_ids[i],'/',study_ids[i],'.',phenos[i],'.',s,'.scor.tsv.gz')
+        mean_sd_full_filepath <- paste0(basepath,'01_prspipe_followup_results/',b_lower,'/downstream_workflows/results/metrics_and_scor_full/',study_ids[i],'/',study_ids[i],'.',phenos[i],'.',s,'.mean_sd.tsv')
+        metrics_full_filepath <- paste0(basepath,'01_prspipe_followup_results/',b_lower,'/downstream_workflows/results/metrics_and_scor_full/',study_ids[i],'/',study_ids[i],'.',phenos[i],'.',s,'.metrics.tsv')
+        mean_sd_traintest_filepath <- paste0(basepath,'01_prspipe_followup_results/',b_lower,'/downstream_workflows/results/metrics_and_scor_train_test/',study_ids[i],'/',study_ids[i],'.',phenos[i],'.',s,'.mean_sd.tsv')
+        metrics_traintest_filepath <- paste0(basepath,'01_prspipe_followup_results/',b_lower,'/downstream_workflows/results/metrics_and_scor_train_test/',study_ids[i],'/',study_ids[i],'.',phenos[i],'.',s,'.metrics.tsv')
+        score_score_correl_filepath <- paste0(basepath,'01_prspipe_followup_results/',b_lower,'/downstream_workflows/results/metrics_and_scor_train_test/',study_ids[i],'/',study_ids[i],'.',phenos[i],'.',s,'.scor.tsv')
 
 
         # nested pTclump, GenoPred metrics
@@ -43,9 +43,7 @@ load_results_metadata <- function(basepath, biobanks=c('ukbb','ebb','finngen','G
         ptclump_nested_assoc_filepath <- paste0(basepath,'01_prspipe_followup_results/',b_lower,'/downstream_workflows/results/PRS_evaluation/pt_clump_nested/',study_ids[i],'/',s,'/',study_ids[i],'.',phenos[i],'.',s,'.assoc.txt')
 
         if (file.exists(bm_filepath)){
-          con <- gzfile(bm_filepath, "r")
-          wc <- length(readLines(con))
-          close(con)
+          wc <- length(readLines(bm_filepath))
           if (wc > 1){
             infiles[[bm_filepath]] <- data.frame(bbid=tolower(b),
                                                  ancestry=s,
@@ -459,9 +457,11 @@ methods <-
   )
 
 # download data
-url <- "https://figshare.com/ndownloader/files/40418924?private_link=c9ea515995d8f61c74a0"
-download.file(url, "data-raw/results.tar.gz")
-untar("data-raw/results.tar.gz", exdir = "data-raw/")
+if (!file.exists("data-raw/results.tar.gz")) {
+  url <- "https://figshare.com/ndownloader/files/40418924?private_link=c9ea515995d8f61c74a0"
+  download.file(url, "data-raw/results.tar.gz")
+  untar("data-raw/results.tar.gz", exdir = "data-raw/")
+}
 
 # load data
 # ------------------------------------------------------------------------------
@@ -507,5 +507,5 @@ metrics <- metrics[!(bbid == 'ebb' & phenotype == 'Creatinine_eGFR')]
 metrics <- metrics[!(bbid == 'ukbb' & phenotype == 'Alzheimers_disease' & ancestry == 'EUR')]
 
 # export processed data --------------------------------------------------------
-usethis::use_data(metrics, overwrite = TRUE)
+usethis::use_data(metrics, overwrite = TRUE, version=2)
 

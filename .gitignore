@@ -1,0 +1,10 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+.DS_Store
+
+data-raw/results.tar.gz
+data-raw/01_prspipe_followup_results
+data-raw/results
