@@ -1,0 +1,28 @@
+#' @keywords internal
+"_PACKAGE"
+
+## usethis namespace: start
+#' @importFrom data.table :=
+#' @importFrom data.table .BY
+#' @importFrom data.table .EACHI
+#' @importFrom data.table .GRP
+#' @importFrom data.table .I
+#' @importFrom data.table .N
+#' @importFrom data.table .NGRP
+#' @importFrom data.table .SD
+#' @importFrom data.table data.table
+#' @importFrom ggplot2 aes
+#' @importFrom ggplot2 facet_grid
+#' @importFrom ggplot2 geom_errorbar
+#' @importFrom ggplot2 geom_hline
+#' @importFrom ggplot2 geom_point
+#' @importFrom ggplot2 geom_vline
+#' @importFrom ggplot2 ggplot
+#' @importFrom ggplot2 scale_color_manual
+#' @importFrom ggplot2 scale_fill_manual
+#' @importFrom ggplot2 theme
+#' @importFrom ggplot2 theme_bw
+#' @importFrom ggplot2 xlab
+#' @importFrom ggplot2 ylab
+## usethis namespace: end
+NULL
