@@ -4,6 +4,8 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
+🚨 **This package is in under active development with no stable releases available yet** 🚨
+
 The goal of prsCompaR is to ...
 
 ## Installation
