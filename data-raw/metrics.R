@@ -509,5 +509,8 @@ metrics <- metrics[!(bbid == 'ebb' & phenotype == 'Creatinine_eGFR')]
 metrics <- metrics[!(bbid == 'ukbb' & phenotype == 'Alzheimers_disease' & ancestry == 'EUR')]
 
 # export processed data --------------------------------------------------------
-usethis::use_data(metrics, overwrite = TRUE, version=2)
+# let R pick the best compression scheme
+# tools::resaveRdaFiles("data/", compress="auto")
+# tools::checkRdaFiles("data/") -> gzip for this dataset
+usethis::use_data(metrics, overwrite = TRUE, version=2, compress="gzip")
 

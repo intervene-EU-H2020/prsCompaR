@@ -3,7 +3,7 @@
 #' A subset of data from... (science stuff here)
 #'
 #' @format
-#' A data frame with 950 and 49 columns:
+#' A data frame with 950 rows and 49 columns:
 #' \describe{
 #'   \item{predictor}{unique score identifier}
 #'   \item{BETA}{linear/logistic regression coef}
