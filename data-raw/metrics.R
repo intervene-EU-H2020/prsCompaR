@@ -436,7 +436,6 @@ h2l_R2 <- function(k, r2, p) {
   return(h2l_R2)
 }
 
-
 # parameters
 # ------------------------------------------------------------------------------
 methods_levels <- c('pt.clump','dbslmm','ldpred2','lassosum','megaprs','prscs','sbayesr','UKBB.EnsPRS')
@@ -498,6 +497,7 @@ metrics <- rbindlist(lapply(single_results, function(x){
   return(p)
 }), fill=TRUE, use.names=TRUE)
 
+metrics <- prsCompaR::rename_phenotypes(metrics)
 metrics$method <- adjust_methods_levels(metrics$method)
 
 # exclusions:
