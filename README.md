@@ -25,3 +25,10 @@ library(prsCompaR)
 ## basic example code
 ```
 
+## License
+
+The R package code is licensed with [Apache v2](LICENSE.md), and underlying data is licensed with [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/).
+
+If you reuse code or data from this package in published work please cite:
+
+> Remo's fantastic paper
