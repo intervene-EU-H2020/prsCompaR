@@ -15,3 +15,5 @@ Depends:
 Imports: 
     data.table,
     ggplot2
+Suggests:
+    devtools
