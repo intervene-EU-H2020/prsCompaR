@@ -50,8 +50,8 @@ A data frame with 950 and 49 columns:
   \item{R_OBS_BOOT_MEDIAN}{Median correlation coefficient of the PRS with the observed probability-scale outcome (binary endpoints only) for 1000 bootstrap samples}
   \item{R_OBS_BOOT_MEAN}{Mean correlation coefficient of the PRS with the observed probability-scale outcome (binary endpoints only) for 1000 bootstrap samples}
   \item{R_OBS_BOOT_SD}{Standard deviation of correlation coefficient of the PRS with the observed probability-scale outcome (binary endpoints only) for 1000 bootstrap samples}
-  \item{R2_OBS_BOOT_MEAN}{Median variance explained on the probability-scale outcome (binary endpoints only) for 1000 bootstrap samples}
-  \item{R2_OBS_BOOT_MEAN}{ Mean variance explained on the probability-scale outcome (binary endpoints only) for 1000 bootstrap samples}
+  \item{R2_OBS_BOOT_MEDIAN}{Median variance explained on the probability-scale outcome (binary endpoints only) for 1000 bootstrap samples}
+  \item{R2_OBS_BOOT_MEAN}{Mean variance explained on the probability-scale outcome (binary endpoints only) for 1000 bootstrap samples}
 
   \item{R_OBS_CI_BOOT_LOW}{95\% CI lower bound for R_OBS based on 1000 bootstrap samples}
   \item{R_OBS_CI_BOOT_HIGH}{95\% CI upper bound for R_OBS based on 1000 bootstrap samples}
