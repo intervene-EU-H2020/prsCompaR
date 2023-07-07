@@ -1,6 +1,8 @@
 library(stringr)
 library(data.table)
 
+source("data-raw/utils.R")
+
 # functions --------------------------------------------------------------------
 
 load_results_metadata <- function(basepath, biobanks=c('ukbb','ebb','finngen','GNH','hunt'), ancestries=c('AFR', 'AMR', 'EAS', 'EUR', 'SAS')){
@@ -497,7 +499,7 @@ metrics <- rbindlist(lapply(single_results, function(x){
   return(p)
 }), fill=TRUE, use.names=TRUE)
 
-metrics <- prsCompaR::rename_phenotypes(metrics)
+metrics <- rename_phenotypes(metrics)
 metrics$method <- adjust_methods_levels(metrics$method)
 
 # exclusions:

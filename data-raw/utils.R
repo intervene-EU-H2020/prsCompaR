@@ -1,13 +1,3 @@
-get_auto_only_phenotypes <- function() {
-  return(c('Alzheimers_disease','AD','Height'))
-}
-
-#' Give phenotypes nice names
-#'
-#' @param x A data table containing a column called 'phenotype' or 'pheno'
-#'
-#' @return A data table with nicely named phenotypes
-#' @export
 rename_phenotypes <- function(x){
   plotdata <- data.table::copy(x)
   if ('phenotype' %in% colnames(plotdata)){
