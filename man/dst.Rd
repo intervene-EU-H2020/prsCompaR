@@ -27,6 +27,8 @@ A data frame with 11374 rows and 35 columns:
       \deqn{ H_0: beta_y < beta_y} }
   \item{p_z_equal}{p-value for the z-test:
       \deqn{ H_0: beta_x - beta_y = 0} }
+  \item{ci_high_diff}{ \deqn{ \text{beta}_\text{diff} + 1.96 \cdot \text{se}_\text{diff} } }
+  \item{ci_low_diff}{ \deqn{ \text{beta}_\text{diff} - 1.96 \cdot \text{se}_\text{diff} } }
 
   The columns below have the same definitions as the \link{metrics} dataset:
 

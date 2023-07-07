@@ -15,4 +15,5 @@ Depends:
 Suggests:
     devtools,
     data.table,
-    stringr
+    stringr,
+    usethis

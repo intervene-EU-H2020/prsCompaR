@@ -18,6 +18,8 @@ devtools::install_github("intervene-EU-H2020/prsCompaR")
 
 ### Development dependencies
 
+By default development dependencies aren't installed by devtools.
+
 The Suggests: field in the DESCRIPTION file contains packages needed to run the data preprocessing scripts in data-raw (these make the rda files in data/).
 
 The simplest way to install development dependencies is by running:
