@@ -18,11 +18,10 @@ jobs:
         with:
           r-version: 4.x
 
-      - name: Install dependencies from lockfile
-        uses: r-lib/actions/setup-renv@v2
+      - uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          cache-version: 2
-          profile: '"dev"'
-
+          extra-packages: any::rcmdcheck
+          needs: check
+          
       - name: Run R CMD CHECK
         uses: r-lib/actions/check-r-package@v2
