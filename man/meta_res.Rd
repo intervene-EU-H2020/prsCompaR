@@ -3,7 +3,7 @@
 \docType{data}
 \name{meta_res}
 \alias{meta_res}
-\title{Meta-analysed effect size estimates}
+\title{Equivalent to the \code{metrics} data, but meta-analysed.}
 \format{
 A data frame with 351 rows and 21 columns:
 \describe{

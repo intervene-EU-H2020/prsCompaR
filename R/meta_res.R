@@ -1,5 +1,3 @@
-#' Meta-analysed effect size estimates
-#'
 #' Equivalent to the \code{metrics} data, but meta-analysed.
 #'
 #' @format
