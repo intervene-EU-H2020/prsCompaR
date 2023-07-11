@@ -3,6 +3,9 @@ on:
     branches:
       - main
 
+env:
+  RENV_CONFIG_SANDBOX_ENABLED: FALSE
+
 jobs:
   check:
     runs-on: ubuntu-latest 
