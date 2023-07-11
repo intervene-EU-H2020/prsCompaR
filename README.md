@@ -10,7 +10,7 @@ prsCompaR is an [R data package](https://r-pkgs.org/data.html) that contains per
 
 ## Installation
 
-The fatest way to install the development version of prsCompaR using [devtools](https://devtools.r-lib.org):
+The fastest way to install the development version of prsCompaR using [devtools](https://devtools.r-lib.org):
 
 ``` r
 devtools::install_github("intervene-EU-H2020/prsCompaR")
