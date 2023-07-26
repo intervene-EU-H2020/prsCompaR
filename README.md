@@ -8,7 +8,7 @@
 
 pgsCompaR is an [R data package](https://r-pkgs.org/data.html) that contains performance metrics for polygenic risk score (PGS) development methods measured across five European biobanks.
 
-This data package doesn't provide any helpful functions for comparing PRS. It only contains processed experimental data and documentation.
+This data package doesn't provide any helpful functions for comparing PGS. It only contains processed experimental data and documentation.
 
 ## Installation
 
