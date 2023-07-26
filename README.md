@@ -8,9 +8,11 @@
 
 pgsCompaR is an [R data package](https://r-pkgs.org/data.html) that contains performance metrics for polygenic risk score (PGS) development methods measured across five European biobanks.
 
+This data package doesn't provide any helpful functions for comparing PRS. It only contains processed experimental data and documentation.
+
 ## Installation
 
-The fatest way to install the development version of pgsCompaR using [devtools](https://devtools.r-lib.org):
+The fastest way to install the development version of pgsCompaR using [devtools](https://devtools.r-lib.org):
 
 ``` r
 devtools::install_github("intervene-EU-H2020/pgsCompaR")
@@ -38,7 +40,16 @@ You may need to install [renv](https://rstudio.github.io/renv/articles/renv.html
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+There are four datasets exported by this package:
+
+| Dataset    | About                                                              |
+|------------|--------------------------------------------------------------------|
+| `metrics`  | Polygenic risk score performance metrics table for single biobanks |
+| `meta_res` | Equivalent to `metrics`, but meta-analysed                         |
+| `dst`      | Pairwise comparison of polygenic risk score development methods    |
+| `pv_mrg`   | Equivalent to `dst`, but meta-analysed                             |
+
+Dataset documentation can be viewed in R the normal way:
 
 ``` r
 library(pgsCompaR)
