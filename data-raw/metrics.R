@@ -499,14 +499,14 @@ metrics <- rbindlist(lapply(single_results, function(x){
   return(p)
 }), fill=TRUE, use.names=TRUE)
 
-metrics <- rename_phenotypes(metrics)
-metrics$method <- adjust_methods_levels(metrics$method)
-
 # exclusions:
 # sample overlap
 metrics <- metrics[!(bbid == 'ukbb' & phenotype == 'Height' & ancestry == 'EUR')]
 metrics <- metrics[!(bbid == 'ebb' & phenotype == 'Creatinine_eGFR')]
 metrics <- metrics[!(bbid == 'ukbb' & phenotype == 'Alzheimers_disease' & ancestry == 'EUR')]
+
+metrics <- rename_phenotypes(metrics)
+metrics$method <- adjust_methods_levels(metrics$method)
 
 # export processed data --------------------------------------------------------
 # let R pick the best compression scheme
