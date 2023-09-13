@@ -68,6 +68,8 @@ A data frame with 950 rows and 49 columns:
 
   \item{N_CAS}{number of cases for binary endpoints}
   \item{N_CON}{number of controls for binary endpoints}
+
+  \item{is_continuous}{phenotype is continuous (TRUE) or binary (FALSE)}
 }
 }
 \source{

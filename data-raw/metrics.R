@@ -508,6 +508,9 @@ metrics <- metrics[!(bbid == 'ukbb' & phenotype == 'Alzheimers_disease' & ancest
 metrics <- rename_phenotypes(metrics)
 metrics$method <- adjust_methods_levels(metrics$method)
 
+# label continuous / binary traits
+metrics$is_continuous <- ifelse(is.na(metrics$AUC_MEDIAN), TRUE, FALSE)
+
 # export processed data --------------------------------------------------------
 # let R pick the best compression scheme
 # tools::resaveRdaFiles("data/", compress="auto")
