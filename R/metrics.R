@@ -1,9 +1,7 @@
 #' Polygenic risk score performance metrics table for single biobanks
 #'
-#' A subset of data from... (science stuff here)
-#'
 #' @format
-#' A data frame with 950 rows and 49 columns:
+#' A data frame with 950 rows and 50 columns:
 #' \describe{
 #'   \item{predictor}{unique score identifier}
 #'   \item{BETA}{linear/logistic regression coef}
@@ -66,6 +64,8 @@
 #'
 #'   \item{N_CAS}{number of cases for binary endpoints}
 #'   \item{N_CON}{number of controls for binary endpoints}
+#'
+#'   \item{is_continuous}{phenotype is continuous (TRUE) or binary (FALSE)}
 #' }
 #' @source <https://link/to/paper>
 "metrics"

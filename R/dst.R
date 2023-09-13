@@ -1,7 +1,5 @@
 #' Pairwise comparisons of polygenic risk score development methods
 #'
-#' A subset of data from... (science stuff here)
-#'
 #' @format
 #' A data frame with 11374 rows and 35 columns:
 #' \describe{
