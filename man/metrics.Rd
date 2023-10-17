@@ -5,7 +5,7 @@
 \alias{metrics}
 \title{Polygenic risk score performance metrics table for single biobanks}
 \format{
-A data frame with 950 rows and 49 columns:
+A data frame with 950 rows and 50 columns:
 \describe{
   \item{predictor}{unique score identifier}
   \item{BETA}{linear/logistic regression coef}
@@ -79,6 +79,6 @@ A data frame with 950 rows and 49 columns:
 metrics
 }
 \description{
-A subset of data from... (science stuff here)
+Polygenic risk score performance metrics table for single biobanks
 }
 \keyword{datasets}
