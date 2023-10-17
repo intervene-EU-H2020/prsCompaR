@@ -63,6 +63,6 @@ A data frame with 11374 rows and 35 columns:
 dst
 }
 \description{
-A subset of data from... (science stuff here)
+Pairwise comparisons of polygenic risk score development methods
 }
 \keyword{datasets}
