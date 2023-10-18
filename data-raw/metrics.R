@@ -459,7 +459,7 @@ methods <-
 
 # download data
 if (!file.exists("data-raw/results.tar.gz")) {
-  url <- "https://figshare.com/ndownloader/files/40418924?private_link=c9ea515995d8f61c74a0"
+  url <- "https://zenodo.org/records/10012996/files/results.tar.gz?download=1"
   download.file(url, "data-raw/results.tar.gz")
   untar("data-raw/results.tar.gz", exdir = "data-raw/")
 }
