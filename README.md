@@ -59,6 +59,7 @@ data(metrics)
 
 The data are licensed with [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/).
 
-If you reuse data from this package in published work please cite:
+If you reuse data from this package in published work please cite our preprint:
 
-> Remo's fantastic paper
+> Evaluation of polygenic scoring methods in five biobanks reveals greater variability between biobanks than between methods and highlights benefits of ensemble learning.
+> medRxiv 2023.11.20.23298215; doi: https://doi.org/10.1101/2023.11.20.23298215
