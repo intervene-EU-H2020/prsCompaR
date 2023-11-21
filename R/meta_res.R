@@ -30,5 +30,5 @@
 #'   \item{biobanks}{biobanks used to calculate the meta-analysed effect size estimate}
 #'   \item{tuning_type}{equivalent to method_type}
 #' }
-#' @source <https://link/to/paper>
+#' @source \url{https://doi.org/10.1101/2023.11.20.23298215}
 "meta_res"

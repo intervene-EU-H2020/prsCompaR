@@ -67,5 +67,5 @@
 #'
 #'   \item{is_continuous}{phenotype is continuous (TRUE) or binary (FALSE)}
 #' }
-#' @source <https://link/to/paper>
+#' @source \url{https://doi.org/10.1101/2023.11.20.23298215}
 "metrics"

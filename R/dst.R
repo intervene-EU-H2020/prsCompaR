@@ -51,5 +51,5 @@
 #'   \item{auc_x}{AUROC for binary endpoints, method x}
 #'   \item{auc_y}{AUROC for binary endpoints, method y}
 #' }
-#' @source <https://link/to/paper>
+#' @source \url{https://doi.org/10.1101/2023.11.20.23298215}
 "dst"

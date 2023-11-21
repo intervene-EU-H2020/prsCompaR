@@ -47,5 +47,5 @@
 #'   \item{ci_high_diff}{ \deqn{ \text{beta}_\text{diff} + 1.96 \cdot \text{se}_\text{diff} } }
 #'   \item{ci_low_diff}{ \deqn{ \text{beta}_\text{diff} - 1.96 \cdot \text{se}_\text{diff} } }
 #' }
-#' @source <https://link/to/paper>
+#' @source \url{https://doi.org/10.1101/2023.11.20.23298215}
 "pv_mrg"

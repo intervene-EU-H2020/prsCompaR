@@ -36,7 +36,7 @@ A data frame with 351 rows and 21 columns:
 }
 }
 \source{
-<https://link/to/paper>
+\url{https://doi.org/10.1101/2023.11.20.23298215}
 }
 \usage{
 meta_res
