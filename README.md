@@ -59,6 +59,6 @@ data(metrics)
 
 The data are licensed with [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/).
 
-If you reuse data from this package in published work please cite our preprint:
+If you reuse data from this package in published work please cite our publication:
 
-> Remo Monti, Lisa Eick, Georgi Hudjashov, Kristi Läll, Stavroula Kanoni, Brooke N Wolford, Benjamin Wingfield, Oliver Pain, Sophie Wharrie, Bradley Jermy, Aoife McMahon, Tuomo Hartonen, Henrike O Heyne, Nina Mars, Genes & Health Research Team, Kristian Hveem, Michael Inouye, David A van Heel, Reedik Magi, Pekka Marttinen, Samuli Ripatti, Andrea Ganna, Christoph Lippert. "Evaluation of polygenic scoring methods in five biobanks reveals greater variability between biobanks than between methods and highlights benefits of ensemble learning". medRxiv 2023. doi: https://doi.org/10.1101/2023.11.20.23298215
+> Remo Monti, Lisa Eick, Georgi Hudjashov, Kristi Läll, Stavroula Kanoni, Brooke N. Wolford, Benjamin Wingfield, Oliver Pain, Sophie Wharrie, Bradley Jermy, Aoife McMahon, Tuomo Hartonen, Henrike Heyne, Nina Mars, Samuel Lambert, Kristian Hveem, Michael Inouye, David A. van Heel, Reedik Mägi, Pekka Marttinen, Samuli Ripatti, Andrea Ganna, Christoph Lippert. "Evaluation of polygenic scoring methods in five biobanks shows larger variation between biobanks than methods and finds benefits of ensemble learning" The American Journal of Human Genetics 2024. doi: https://doi.org/10.1016/j.ajhg.2024.06.003
