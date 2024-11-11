@@ -11,7 +11,7 @@ data(metrics, overwrite = TRUE)
 # 945 in submission template - 5 rows are dropped from submission data?
 dim(metrics)
 
-# set R2 to be a consistent measurement
+# set R2 to be a consistent measurement (use h2l for case/control phenotypes)
 r2 <- metrics %>%
   mutate(consistent_R2 = ifelse(is_continuous, R2_OBS, h2l),
          consistent_R2_lower = ifelse(is_continuous, R2_OBS_CI_LOW, h2l_ci_low),
@@ -39,8 +39,12 @@ r2$score_name <-stringr::str_glue_data(r2, "INTERVENE_{methods_harmonised}.{meth
 
 # 4. create sample set ID (on PGS Catalog submission template)
 r2$bbid <- fct_recode(metrics$bbid, UKB = "ukbb", EB = "ebb", `G&H` = "gnh", HUNT = "hunt", FinnGen = "finngen")
+r2$ancestry <- fct_recode(metrics$ancestry, European = "EUR", SouthAsian = "SAS")
 r2$sample_set_id <- stringr::str_glue_data(r2, "{bbid}_{ancestry}_{phenotype}")
 
 r2 %>%
-  select(score_name, sample_set_id, consistent_R2, consistent_R2_lower, consistent_R2_upper) %>%
-  write_tsv("r2.tsv")
+  select(score_name, sample_set_id, BETA, BETA_CI_LOW, BETA_CI_HIGH, OR, OR_CI_LOW, OR_CI_HIGH, AUC_MEDIAN, AUC_CI_LOW, AUC_CI_HIGH, consistent_R2, consistent_R2_lower, consistent_R2_upper) %>%
+  tibble(.) -> formatted_metrics
+
+formatted_metrics
+# write_tsv(formatted_metrics, "r2.tsv")
